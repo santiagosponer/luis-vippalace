@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CREA TU USUARIO AHORA</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+        
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: black; /* Fondo inicial negro */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Altura del cuerpo al 100% de la ventana */
+            position: relative;
+        }
+        .background-filter {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('fondousd.jpeg'); /* Imagen de fondo */
+            background-size: cover;
+            z-index: 0;
+        }
+        .image-container {
+            position: relative;
+            max-width: 100%; /* Ajusta el ancho máximo de la imagen */
+            max-height: 100%; /* Ajusta la altura máxima de la imagen */
+            text-align: center;
+            z-index: 1;
+        }
+        .image-container img {
+            max-width: 100%;
+            max-height: calc(100vh - 20px); /* Ajusta la altura máxima de la imagen */
+            display: block;
+            margin: 0 auto;
+        }
+        .button {
+            background-color: rgba(0, 0, 0, 0.7); /* Color negro transparente */
+            color: white;
+            padding: 24px 20px; /* Ajusta el tamaño del botón */
+            border-radius: 7px; /* Ajusta el redondeo de las esquinas del botón */
+            text-decoration: none;
+            font-size: 1em; /* Ajusta el tamaño del texto */
+            text-transform: uppercase;
+            transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+            position: absolute;
+            top: 49%; /* Ajusta esta propiedad para subir o bajar el botón */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            font-family: 'Poppins', sans-serif; /* Fuente Poppins */
+            width: 250px; /* Ancho fijo del botón */
+            justify-content: center; /* Centra el contenido del botón */
+            white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+            box-shadow: 0 0 15px 5px white; /* Destello blanco */
+        }
+        .button:hover {
+            background-color: rgba(0, 0, 0, 0.7); /* Mantiene el color negro transparente */
+            color: white; /* Color blanco para el texto */
+            box-shadow: 0 0 20px 10px gold; /* Destello dorado */
+        }
+        .button img {
+            width: 24px; /* Ancho del icono de WhatsApp */
+            height: 24px; /* Altura del icono de WhatsApp */
+            vertical-align: middle; /* Alineación vertical con el texto */
+            margin-right: 10px; /* Espacio a la derecha del icono */
+        }
+    </style>
+
+ <!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '857876159550689');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=857876159550689&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+    <!-- Custom Event Tracking for Button -->
+    <script>
+    function trackWhatsAppClick() {
+        fbq('track', 'Contact');
+        window.location.href = "https://wa.me/3515302730?text=Hola!%20Vi%20este%20anuncio,%20quiero%20un%20usuario%20y%20mi%20bono%20por%20favor!%20gracias.";
+    }
+    </script>
+
+</head>
+<body>
+    <div class="background-filter"></div>
+    <div class="image-container">
+        <img src="foto-vippalace.png" alt="Imagen de fondo">
+        <a href="javascript:void(0);" onclick="trackWhatsAppClick()" class="button">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+            Crea tu usuario ahora
+        </a>
+    </div>
+</body>
+</html>
